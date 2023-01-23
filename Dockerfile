@@ -39,9 +39,6 @@ RUN set -ex \
     # install jupyter lab extensions you need
     && jupyter labextension install jupyterlab-plotly@5.4.0 --no-build \
 	&& jupyter labextension install jupyterlab-drawio --no-build \
-	&& jupyter labextension install jupyterlab-execute-time@2.3.1 --no-build \
-	&& jupyter labextension install jupyterlab-spreadsheet --no-build \
-	&& jupyter labextension install "@kiteco/jupyterlab-kite" --no-build \
     && jupyter lab build -y \
     && jupyter lab clean -y \
     && rm -rf "/home/${NB_USER}/.cache/yarn" \
